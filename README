@@ -13,4 +13,7 @@ sudo ./main -mount="/" -sort="diskusage"
 The default is mount point
 
 
+Sometime files cannot be read due to system file or transient files. These files which are not read (specially in / mount point) are written in log file called execution.log
+
+
 

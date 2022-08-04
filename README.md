@@ -3,9 +3,10 @@
 
 ##  Set build architecture and running build command 👋
 ```set GOARCH=amd64
-```set GOOS=linux
-```go build
-```go build  
+set GOOS=linux
+go build
+go build 
+```
 
 # Here are few application parameters
 -mount argument is for mount point
@@ -38,7 +39,7 @@ Sometime files cannot be read due to system file or transient files. These files
 - 📱 React Native
 - Clickhouse
 - Prometheus
-- Reliability 
+- Reliability
+- GoLang
 
-## 💼 Technical Skills
 

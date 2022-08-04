@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+	"path/filepath"
 	"sort"
 )
 
@@ -27,15 +29,6 @@ func sortByValue(kvarr map[string]int64) []Pair {
 
 	sort.Sort(sort.Reverse(p))
 
-	//p is sorted
-
-	result := make(map[string]int64)
-
-	for _, k := range p {
-		result[k.Key] = k.Value
-		//fmt.Printf("%v\t%v\n", k.Key, k.Value)
-	}
-
 	return p
 
 }
@@ -50,4 +43,18 @@ func sortByKey(varr map[string]int64) []string {
 	sort.Strings(keys)
 
 	return keys
+}
+
+func dirSize(path string) (int64, error) {
+	var size int64
+	err := filepath.Walk(path, func(_ string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+		if !info.IsDir() {
+			size += info.Size()
+		}
+		return err
+	})
+	return size, err
 }

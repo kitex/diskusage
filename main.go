@@ -33,9 +33,9 @@ func main() {
 	//test case
 
 	arg1 := flag.String("mount", "/", "default mount point is root /")
-	fmt.Println("Size:", arg1)
+	//fmt.Println("Size:", arg1)
 
-	arg2 := flag.String("sort", "/", "default mount point is root /")
+	arg2 := flag.String("sort", "mount", "default sort is mount")
 
 	flag.Parse()
 	mountPoint := *arg1
@@ -44,8 +44,6 @@ func main() {
 	fileDirList := make(map[string]int64)
 
 	var stat unix.Statfs_t
-
-	fmt.Println(sortBy)
 
 	unix.Statfs(mountPoint, &stat)
 
@@ -82,7 +80,7 @@ func main() {
 		var size int64
 		if f.IsDir() {
 			//fmt.Println(absPath)
-			size, err = DirSize(absPath)
+			size, err = dirSize(absPath)
 			if err != nil {
 				//log.("Error occured ", err)
 				log.Println("Error", err)
@@ -124,20 +122,6 @@ func main() {
 		fmt.Println(string(jsonStr))
 	}
 
-}
-
-func DirSize(path string) (int64, error) {
-	var size int64
-	err := filepath.Walk(path, func(_ string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-		if !info.IsDir() {
-			size += info.Size()
-		}
-		return err
-	})
-	return size, err
 }
 
 // go mod init main

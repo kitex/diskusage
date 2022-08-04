@@ -1,4 +1,5 @@
-2022/08/04 17:30:46 Error lstat /proc/78899/fd/7: no such file or directory
-2022/08/04 17:30:46 Error lstat /run/user/1000/doc: permission denied
-2022/08/04 17:33:40 Error lstat /proc/79123/fd/7: no such file or directory
-2022/08/04 17:33:40 Error lstat /run/user/1000/doc: permission denied
+2022/08/04 20:48:48 Error open /var/cache/apparmor/08ba9d86.0: permission denied
+2022/08/04 20:48:48 Error open /var/lib/AccountsService/users: permission denied
+2022/08/04 20:48:48 Error open /var/log/gdm3: permission denied
+2022/08/04 20:48:48 Error open /var/spool/cron/crontabs: permission denied
+2022/08/04 20:48:48 Error open /var/tmp/systemd-private-75f8abd4e9284d7183be84aba187f5e0-ModemManager.service-CR6aWi: permission denied

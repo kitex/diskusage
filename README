@@ -8,5 +8,9 @@ Running the application:
 
 sudo ./main -mount="/" -sort="diskusage"
 
+-mount argument is for mount point
+-sort is parameter for sorting by diskusage or mount point.
+The default is mount point
+
 
 

@@ -1,7 +1,10 @@
 This is utility application 
 
 Building the application:
-
+# Set build architecture
+set GOARCH=amd64
+set GOOS=linux
+go build
 go build 
 
 Running the application:

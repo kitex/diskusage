@@ -1,37 +1,29 @@
-This is utility application 
 
-Building the application:
+## This is utility application for showing disk usage by partition 💬
 
-
-
-
-
-
-<p align="center">
-   This is utility application for showing disk usage by partition
-</p>
-
-<h3 align="center">
-# Set build architecture 👋
+##  Set build architecture and running build command 👋
 set GOARCH=amd64
 set GOOS=linux
 go build
 go build  
-</h3>
 
-<h2 align="center">
-I'm a Developer 💻,Motivator 📸, and Avid Reader 
-</h2> 
+# Here are few application parameters
+-mount argument is for mount point
+-sort is parameter for sorting by diskusage or mount point.
+* The default is sort by mount point *
 
-Running the application:
+Sometime files cannot be read due to system file or transient files. These files which are not read (specially in / mount point) are written in log file called execution.log
+
+## I'm a Developer 💻,Motivator 📸, and Avid Reader 
+
+
+## Running the application:
 
 sudo ./main -mount="/" -sort="diskusage"
 
 
-### 🤝 Connect with me:
+### 🤝 Connect with me: https://www.linkedin.com/in/sugandha-amatya/
 
-<a href="https://www.linkedin.com/in/sugandha-amatya"><img align="left" src="https://pbs.twimg.com/profile_images/507757593045909504/xmVrkfrH_400x400.jpeg" alt="Sugandha Amatya| LinkedIn" width="21px"/></a>
-- 💬 If you have any question/feedback, please do not hesitate to reach out to me!
 
 ## 🔭 I'm currently working on
 
@@ -49,21 +41,4 @@ sudo ./main -mount="/" -sort="diskusage"
 - Reliability 
 
 ## 💼 Technical Skills
-
-![](https://img.shields.io/badge/Code-React-informational?style=flat&logo=react&color=61DAFB)
-![](https://img.shields.io/badge/Code-PostgreSQL-informational?style=flat&logo=PostgreSQL&color=336791)
-</br>
-
-
-
-<h2 align="center">
-here are few application parameters
--mount argument is for mount point
--sort is parameter for sorting by diskusage or mount point.
-The default is mount point
-
-
-Sometime files cannot be read due to system file or transient files. These files which are not read (specially in / mount point) are written in log file called execution.log
-</h2> 
-
 

@@ -14,7 +14,7 @@ go build
  - argument is for mount point
  
 `-sort` 
-```
+
  - argument for sorting by diskusage or mount point.
  
 * The default is sort by mount point *

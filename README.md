@@ -38,7 +38,7 @@ sudo ./main -mount="/" -sort="diskusage"
 - React Project
 - Clickhouse
 - My Health
-- My Linx Skill
+- My Linux Skill / Azure / DevOps
 - My SRE skill
 
 ## 🌱 I'm currently learning

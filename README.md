@@ -2,10 +2,10 @@
 ## This is utility application for showing disk usage by partition 💬
 
 ##  Set build architecture and running build command 👋
-set GOARCH=amd64
-set GOOS=linux
-go build
-go build  
+```set GOARCH=amd64
+```set GOOS=linux
+```go build
+```go build  
 
 # Here are few application parameters
 -mount argument is for mount point
@@ -19,7 +19,7 @@ Sometime files cannot be read due to system file or transient files. These files
 
 ## Running the application:
 
-sudo ./main -mount="/" -sort="diskusage"
+```sudo ./main -mount="/" -sort="diskusage"
 
 
 ### 🤝 Connect with me: https://www.linkedin.com/in/sugandha-amatya/

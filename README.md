@@ -9,11 +9,11 @@ go build
 ```
 
 # Here are few application parameters
-```--mount 
+``` --mount 
 ```
  - argument is for mount point
  
-```--sort 
+``` --sort 
 ```
 argument for sorting by diskusage or mount point.
 * The default is sort by mount point *

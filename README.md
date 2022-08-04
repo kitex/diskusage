@@ -9,8 +9,13 @@ go build
 ```
 
 # Here are few application parameters
--mount argument is for mount point
--sort is parameter for sorting by diskusage or mount point.
+```-mount 
+```
+ - argument is for mount point
+ 
+```-sort 
+```
+argument for sorting by diskusage or mount point.
 * The default is sort by mount point *
 
 Sometime files cannot be read due to system file or transient files. These files which are not read (specially in / mount point) are written in log file called execution.log

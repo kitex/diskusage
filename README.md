@@ -20,7 +20,8 @@ Sometime files cannot be read due to system file or transient files. These files
 
 ## Running the application:
 
-```sudo ./main -mount="/" -sort="diskusage"
+```
+sudo ./main -mount="/" -sort="diskusage"
 ```
 
 ### 🤝 Connect with me: https://www.linkedin.com/in/sugandha-amatya/

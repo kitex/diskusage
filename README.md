@@ -5,6 +5,7 @@
 
 ## Initialize
 ```go mod init main```
+
 ```get golang.org/x/sys/unix```
 
 ##  Set build architecture and run build command 👋

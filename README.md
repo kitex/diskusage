@@ -13,11 +13,11 @@ get golang.org/x/sys/unix
 
 ##  Set build architecture and run build command 👋
 ```set GOARCH=amd64
-set GOOS=linux
-go build
+set GOOS=linux 
+go build -o diskusage //If building for current system just use this line only
 ```
 # Example command
-```sudo ./main -mount="/" -sort="diskusage"```
+```sudo ./diskusage -mount="/" -sort="diskusage"```
 
 # Here are few application parameters
 `-mount` 
@@ -38,7 +38,7 @@ Sometime files cannot be read due to system file or transient files. These files
 ## Running the application: (Need to run as sudo user because root directory has permission issue)
 
 ```
-sudo ./main -mount="/" -sort="diskusage"
+sudo ./diskusage -mount="/" -sort="diskusage"
 ```
 
 ### 🤝 Connect with me: https://www.linkedin.com/in/sugandha-amatya/

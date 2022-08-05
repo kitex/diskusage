@@ -51,24 +51,25 @@ func main() {
 	//var available_space = stat.Bavail * uint64(stat.Bsize)
 
 	//fmt.Println(available_space / (1024 * 1024))
+	/*
+		totalSize := stat.Blocks * uint64(stat.Bsize)
+		totalSizeMb := float64(totalSize) / (1024 * 1024)
 
-	totalSize := stat.Blocks * uint64(stat.Bsize)
-	totalSizeMb := float64(totalSize) / (1024 * 1024)
+		free := stat.Bfree * uint64(stat.Bsize)
+		freeMb := float64(free) / (1024 * 1024)
 
-	free := stat.Bfree * uint64(stat.Bsize)
-	freeMb := float64(free) / (1024 * 1024)
+		avail := stat.Bavail * uint64(stat.Bsize)
+		availMB := float64(avail) / (1024 * 1024)
 
-	avail := stat.Bavail * uint64(stat.Bsize)
-	availMB := float64(avail) / (1024 * 1024)
 
-	//fmt.Println("Size:", int(math.Ceil(totalSizeMb)))
-	fmt.Println("-------------------- The size of mount point --------------------")
-	fmt.Println("Size:", totalSizeMb)
-	fmt.Println("Free:", freeMb)
-	fmt.Println("Available:", availMB) //reserved filesystem block for root
-	fmt.Println("Used:", totalSizeMb-freeMb)
-	fmt.Println("-------------------- End of Printing Mount Storage --------------------")
 
+		fmt.Println("-------------------- The size of mount point --------------------")
+		fmt.Println("Size:", totalSizeMb)
+		fmt.Println("Free:", freeMb)
+		fmt.Println("Available:", availMB) //reserved filesystem block for root
+		fmt.Println("Used:", totalSizeMb-freeMb)
+		fmt.Println("-------------------- End of Printing Mount Storage --------------------")
+	*/
 	files, err := ioutil.ReadDir(mountPoint)
 	if err != nil {
 		log.Fatal(err)

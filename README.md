@@ -1,12 +1,19 @@
-
+## Clone this project 
+```git clone git clone https://github.com/kitex/diskusage.git```
+```cd diskusage```
 ## This is utility application for showing disk usage by partition 💬
 
-##  Set build architecture and running build command 👋
+## Initialize
+```go mod init main```
+```get golang.org/x/sys/unix```
+
+##  Set build architecture and run build command 👋
 ```set GOARCH=amd64
 set GOOS=linux
 go build
-go build 
 ```
+# Example command
+```sudo ./main -mount="/" -sort="diskusage"```
 
 # Here are few application parameters
 `-mount` 
@@ -24,7 +31,7 @@ Sometime files cannot be read due to system file or transient files. These files
 ## I'm a Developer 💻,Motivator 📸, and Avid Reader 
 
 
-## Running the application:
+## Running the application: (Need to run as sudo user because root directory has permission issue)
 
 ```
 sudo ./main -mount="/" -sort="diskusage"

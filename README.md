@@ -1,12 +1,11 @@
 ## Clone this project 
-```git clone git clone https://github.com/kitex/diskusage.git```
-```cd diskusage```
+```git clone git clone https://github.com/kitex/diskusage.git
+cd diskusage```
 ## This is utility application for showing disk usage by partition 💬
 
 ## Initialize
-```go mod init main```
-
-```get golang.org/x/sys/unix```
+```go mod init main
+get golang.org/x/sys/unix```
 
 ##  Set build architecture and run build command 👋
 ```set GOARCH=amd64

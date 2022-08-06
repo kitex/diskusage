@@ -24,13 +24,11 @@ func main() {
 	if err != nil {
 		fmt.Println("Error with log file", err)
 	}
-	//defer to close when you're done with it, not because you think it's idiomatic!
+	//close the file at the end of main
 	defer logFile.Close()
 
-	//set output of logs to f
+	//set output of logs to logfile
 	log.SetOutput(logFile)
-
-	//test case
 
 	arg1 := flag.String("mount", "/", "default mount point is root /")
 	//fmt.Println("Size:", arg1)
@@ -46,29 +44,29 @@ func main() {
 	var stat unix.Statfs_t
 
 	unix.Statfs(mountPoint, &stat)
-
-	// Available blocks * size per block = available space in bytes
-	//var available_space = stat.Bavail * uint64(stat.Bsize)
-
-	//fmt.Println(available_space / (1024 * 1024))
 	/*
-		totalSize := stat.Blocks * uint64(stat.Bsize)
-		totalSizeMb := float64(totalSize) / (1024 * 1024)
+		// Available blocks * size per block = available space in bytes
+		//var available_space = stat.Bavail * uint64(stat.Bsize)
 
-		free := stat.Bfree * uint64(stat.Bsize)
-		freeMb := float64(free) / (1024 * 1024)
+		//fmt.Println(available_space / (1024 * 1024))
 
-		avail := stat.Bavail * uint64(stat.Bsize)
-		availMB := float64(avail) / (1024 * 1024)
+			totalSize := stat.Blocks * uint64(stat.Bsize)
+			totalSizeMb := float64(totalSize) / (1024 * 1024)
+
+			free := stat.Bfree * uint64(stat.Bsize)
+			freeMb := float64(free) / (1024 * 1024)
+
+			avail := stat.Bavail * uint64(stat.Bsize)
+			availMB := float64(avail) / (1024 * 1024)
 
 
 
-		fmt.Println("-------------------- The size of mount point --------------------")
-		fmt.Println("Size:", totalSizeMb)
-		fmt.Println("Free:", freeMb)
-		fmt.Println("Available:", availMB) //reserved filesystem block for root
-		fmt.Println("Used:", totalSizeMb-freeMb)
-		fmt.Println("-------------------- End of Printing Mount Storage --------------------")
+			fmt.Println("-------------------- The size of mount point --------------------")
+			fmt.Println("Size:", totalSizeMb)
+			fmt.Println("Free:", freeMb)
+			fmt.Println("Available:", availMB) //reserved filesystem block for root
+			fmt.Println("Used:", totalSizeMb-freeMb)
+			fmt.Println("-------------------- End of Printing Mount Storage --------------------")
 	*/
 	files, err := ioutil.ReadDir(mountPoint)
 	if err != nil {
